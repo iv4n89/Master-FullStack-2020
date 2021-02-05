@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory.DoubleSpinnerValueFactory?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cloudftic.fxexample.data.VentaFx ?>
+
+<VBox alignment="CENTER" prefHeight="237.0" prefWidth="461.0"
+	spacing="0" xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.cloudftic.fxexample.PrimaryController">
+	<children>
+		<BorderPane minHeight="200.0" prefWidth="200.0">
+			<bottom>
+				<Label alignment="BOTTOM_LEFT" text="Gestión de ventas."
+					BorderPane.alignment="BOTTOM_LEFT" />
+			</bottom>
+			<left>
+				<ListView fx:id="ventasId" prefHeight="200.0" prefWidth="200.0"
+					BorderPane.alignment="CENTER" />
+			</left>
+			<center>
+				<ScrollPane prefHeight="200.0" prefWidth="200.0"
+					BorderPane.alignment="CENTER">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0"
+							prefHeight="200.0" prefWidth="200.0">
+							<children>
+								<Pane prefHeight="200.0" prefWidth="200.0">
+									<children>
+										<Label layoutX="14.0" layoutY="14.0" text="Código" />
+										<Label fx:id="codigoId" layoutX="72.0" layoutY="14.0" />
+										<Label layoutX="19.0" layoutY="37.0" text="Coste" />
+										<Label layoutX="19.0" layoutY="63.0" text="Descripción" />
+										<Spinner fx:id="costeId" layoutX="72.0" layoutY="33.0"
+											prefHeight="25.0" prefWidth="114.0">
+											<valueFactory>
+												<SpinnerValueFactory.DoubleSpinnerValueFactory
+													min="1.0" max="10000.0" initialValue="5.5" amountToStepBy="0.5" />
+											</valueFactory>
+										</Spinner>
+										<TextArea fx:id="descripcionId" layoutX="17.0"
+											layoutY="88.0" prefHeight="58.0" prefWidth="170.0" />
+									</children>
+								</Pane>
+							</children>
+						</AnchorPane>
+					</content>
+				</ScrollPane>
+			</center>
+		</BorderPane>
+	</children>
+	<padding>
+		<Insets bottom="0" left="0" right="0" top="0" />
+	</padding>
+</VBox>
