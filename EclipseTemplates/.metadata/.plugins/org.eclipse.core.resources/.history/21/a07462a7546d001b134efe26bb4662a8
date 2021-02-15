@@ -1,0 +1,20 @@
+package com.cloudftic.fxapp1;
+
+import java.io.IOException;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+
+public class SecondaryController {
+
+	@FXML
+	private TextField textoId;
+    @FXML
+    private void switchToPrimary() throws IOException {
+        App.setRoot("primary");
+    }
+    @FXML
+    private void hacerAlgo() {
+    	textoId.setText(textoId.getText().toUpperCase());
+    }
+}

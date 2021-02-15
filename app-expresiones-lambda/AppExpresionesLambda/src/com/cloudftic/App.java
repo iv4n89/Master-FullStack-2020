@@ -42,7 +42,7 @@ public class App {
 
         List<String> resultado;
         // Obten las palabras que tengan la misma logitud que la primera
-        resultado = evalue(palabras, (a, b) -> a.length() == palabras.get(0).length());
+        resultado = evalue(palabras, (a, b) -> a.length() == palabras.get(0).length()&&b!=0);
         System.out.println(resultado);
 
         // Obten las palabras que comiencen por la letra "a"
@@ -55,7 +55,7 @@ public class App {
 
         // Obten las palabras que aparezcan en posiciones opuestas.
         // (e.j. si una misma palabra est� al principio y al final se incluye)
-        resultado = evalue(palabras, (a,b)->palabras.lastIndexOf(a)==palabras.size()-1-b);
+        resultado = evalue(palabras, (a,b)->palabras.indexOf(a)==palabras.size()-b-1);
         System.out.println(resultado);
 
         // Obten las palabras que aparezcan en posiciones opuestas.

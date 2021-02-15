@@ -1,6 +1,8 @@
 package ejercicio3;
 
+import java.awt.*;
+
 public interface IFigura {
-    String getColor();
+    Color getColor();
     double[] getPosition();
 }

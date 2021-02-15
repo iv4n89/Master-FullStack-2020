@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body onload="init()">
+	<script>
+		// Implementación del websocket
+		var uri = "ws://localhost:8084/web2/eco";
+		var socket;
+
+		function init() {
+			socket = new WebSocket(uri);
+			socket.onopen = function(evt) {
+				// Servidor Web Socket está conectado
+				document.getElementById("btnenviar").disabled = false;
+			};
+			socket.onerror = function(event) {
+				alert("Error: " + JSON.stringify(event, null, 4))
+			};
+			socket.onclose = function(event) {
+				// La conexión ha sido cerrada
+				if (event.wasClean) {
+					alert("Conexión cerrada correctamente");
+				} else {
+					alert("Conexión cerrada con problemas. "
+							+ JSON.stringify(event, null, 4));
+				}
+			};
+			socket.onmessage = function onMessage(event) {
+				// Procesa los mensajes recibidos desde el servidor
+				var mensaje = event.data;
+				document.getElementById("content").innerHTML += "<p>" + mensaje
+						+ "</p>";
+			}
+		}
+		function enviarMensaje() {
+			var inputMensaje = document.getElementById("mensaje");
+			var mensaje = inputMensaje.value;
+			inputMensaje.value = "";
+			socket.send(mensaje);
+		}
+		function cerrar() {
+			socket.close(1000, "No error. Comunicación finalizada.");
+		}
+	</script>
+
+	<div>
+		<label>Mensaje:</label> <input type="text" id="mensaje">
+	</div>
+	<input id="btnenviar" type="button" disabled="disabled" value="enviar"
+		onclick="enviarMensaje()">
+	<input type="button" value="Cerrar" onclick="cerrar()">
+	<h3>Mensaje rebibido:</h3>
+	<div id="content"></div>
+
+</body>
+</html>
