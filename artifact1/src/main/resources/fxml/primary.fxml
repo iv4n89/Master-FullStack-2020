@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="476.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group1.artifact1.FXMLController">
+    <children>
+        <Button layoutX="309.0" layoutY="387.0" onAction="#btnClickAction" text="Click Me!" />
+        <Label fx:id="lblOut" layoutX="234.0" layoutY="308.0" minHeight="16" minWidth="69" prefHeight="52.0" prefWidth="215.0" />
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="654.0">
+         <children>
+            <TextField fx:id="text1" layoutX="14.0" layoutY="161.0" />
+            <TextField fx:id="text2" layoutX="185.0" layoutY="162.0" />
+            <TextField fx:id="text3" layoutX="356.0" layoutY="162.0" />
+            <Label fx:id="label1" layoutX="14.0" layoutY="137.0" prefHeight="18.0" prefWidth="152.0" text="Selecciona un boton" />
+            <Label fx:id="label2" layoutX="185.0" layoutY="138.0" prefHeight="18.0" prefWidth="152.0" text="Sustituir por comas" />
+            <Label fx:id="label3" layoutX="356.0" layoutY="139.0" prefHeight="18.0" prefWidth="152.0" text="Introduce un numero o una expresion para acumular" />
+            <Button fx:id="valFecha" layoutX="14.0" layoutY="88.0" mnemonicParsing="false" onAction="#validarFecha" onMouseEntered="#switchToLabelFecha" onMouseExited="#labelNeutral" prefHeight="32.0" prefWidth="152.0" text="Validar fecha" />
+            <Button layoutX="185.0" layoutY="88.0" mnemonicParsing="false" onAction="#sustituirPuntos" prefHeight="32.0" prefWidth="152.0" text="Sustituir puntos" />
+            <Button layoutX="356.0" layoutY="88.0" mnemonicParsing="false" onAction="#acumulador" prefHeight="32.0" prefWidth="152.0" text="Acumulador" />
+            <Button fx:id="valCorr" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#validarCorreo" onMouseEntered="#switchToLabelCorr" onMouseExited="#labelNeutral" prefHeight="32.0" prefWidth="152.0" text="Validar correo" />
+            <Button fx:id="valDir" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#validarDir" onMouseEntered="#switchToLabelDir" onMouseExited="#labelNeutral" prefHeight="32.0" prefWidth="152.0" text="Validar direccion">
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

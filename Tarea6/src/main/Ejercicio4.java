@@ -9,6 +9,8 @@ Usa una estructura mediante métodos.
 
 package main;
 
+import java.util.Arrays;
+
 public class Ejercicio4 {
 	void ejercicio4() {
 		String nombres[]=new String[10];
@@ -61,6 +63,7 @@ public class Ejercicio4 {
 		}
 		return mayores;
 	}
+	
 	
 	private int hacerMedia(int[] edades) {
 		int media=0;

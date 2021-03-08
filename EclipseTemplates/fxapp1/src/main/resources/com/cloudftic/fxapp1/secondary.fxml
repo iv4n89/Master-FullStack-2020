@@ -15,6 +15,8 @@
 				<FlowPane minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
 					<children>
 						<Button onAction="#hacerAlgo" text="Hacer algo" />
+						<Button onAction="#validarFecha" text="Validar fecha" />
+						<Button onAction="#sustituir" text="Sustituir" />
 						<Button onAction="#switchToPrimary" text="Regresar" />
 					</children>
 					<BorderPane.margin>

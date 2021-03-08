@@ -12,6 +12,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Locale;
 
 /**
  * JavaFX App
@@ -22,26 +23,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
-        stage.setTitle("Aplicacion de prueba");
-        Button btn= new Button("Hola");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-			
-			@Override
-			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
-				Alert alert=new Alert(Alert.AlertType.INFORMATION);
-				alert.setTitle("Hola!");
-				alert.setContentText("Hola caracola!");
-				alert.show();
-			}
-		});
-        
-        StackPane stack= new StackPane();
-        stack.getChildren().add(btn);
-        stage.setScene(new Scene(stack, 300,200));
-        stage.show();
-    }
+            scene = new Scene(loadFXML("primary"), 640, 480);
+            stage.setScene(scene);
+            stage.show();
+        }
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
@@ -51,8 +36,11 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
+    
+    final static String NEWLINE=System.getProperty("line.separator");
 
     public static void main(String[] args) {
+    	//Locale.setDefault(new Locale("es","ES"));
         launch(args);
     }
 

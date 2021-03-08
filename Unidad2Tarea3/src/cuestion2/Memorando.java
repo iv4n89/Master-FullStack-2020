@@ -30,16 +30,23 @@ public class Memorando {
         return numeroArticulos;
     }
 
-    public String[] getArticulo() {
-        return articulo;
+    /**
+     *
+     * @param indice posicion del articulo, contando desde 1
+     * @return String articulo de indice que se nos da
+     */
+    public String getArticulo(int indice) {
+        if(indice<1||indice>getNumeroArticulos()) return null;
+        return articulo[indice-1];
     }
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    public void setArticulo(String[] articulo) {
-        this.articulo = articulo;
+    public void setArticulo(int indice, String articulo) {
+
+
     }
 
     public String[] articulosQueCumplenCon(IProcesa validacion){

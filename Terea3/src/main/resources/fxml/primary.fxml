@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?Import javafx.scene.control.ColorPicker?>
+
+<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="397.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Unidad3.Terea3.FXMLController">
+   <children>
+      <VBox fx:id="vbox" prefHeight="698.0" prefWidth="397.0" />
+      <Label layoutX="18.0" layoutY="26.0" prefHeight="17.0" prefWidth="100.0" text="Escribe una fecha" />
+      <TextField fx:id="textDate1" layoutX="118.0" layoutY="22.0" prefHeight="25.0" prefWidth="262.0" />
+      <Label layoutX="18.0" layoutY="60.0" prefHeight="17.0" prefWidth="100.0" text="Formato fecha" />
+      <TextField fx:id="textFormat" layoutX="118.0" layoutY="56.0" prefHeight="25.0" prefWidth="262.0" />
+      <Label fx:id="labelOut1" layoutX="14.0" layoutY="127.0" prefHeight="17.0" prefWidth="221.0" text="Salida" />
+      <Label fx:id="labelOut2" layoutX="261.0" layoutY="123.0" prefHeight="25.0" prefWidth="91.0" text="Salida" />
+      <Button layoutX="14.0" layoutY="162.0" mnemonicParsing="false" onAction="#stringToDate" prefHeight="25.0" prefWidth="363.0" text="Mostrar salida de tipo Date y tipo String" />
+      <Label layoutX="18.0" layoutY="250.0" prefHeight="17.0" prefWidth="100.0" text="Escribe una fecha" />
+      <Label layoutX="18.0" layoutY="289.0" prefHeight="17.0" prefWidth="100.0" text="Escribe 2ª fecha" />
+      <TextField fx:id="textDate2" layoutX="118.0" layoutY="246.0" prefHeight="25.0" prefWidth="262.0" />
+      <TextField fx:id="textDate3" layoutX="118.0" layoutY="285.0" prefHeight="25.0" prefWidth="262.0" />
+      <Label fx:id="labelOut3" layoutX="18.0" layoutY="336.0" prefHeight="17.0" prefWidth="171.0" text="Diferencia entre ambas fechas:" />
+      <Label fx:id="labelOut4" layoutX="210.0" layoutY="336.0" prefHeight="17.0" prefWidth="171.0" text="Salida" />
+      <Button layoutX="17.0" layoutY="375.0" mnemonicParsing="false" onAction="#timeBetween" prefHeight="25.0" prefWidth="363.0" text="Tiempo entre dos fechas" />
+      <Label layoutX="14.0" layoutY="106.0" prefHeight="17.0" prefWidth="91.0" text="Date" />
+      <Label layoutX="247.0" layoutY="106.0" prefHeight="17.0" prefWidth="119.0" text="String formateado" />
+      <Button layoutX="17.0" layoutY="521.0" mnemonicParsing="false" onAction="#getSundays" prefHeight="25.0" prefWidth="363.0" text="Ver qué días son domingos" />
+      <TextField fx:id="textYear" layoutX="18.0" layoutY="482.0" prefHeight="25.0" prefWidth="171.0" />
+      <TextField fx:id="textMonth" layoutX="210.0" layoutY="482.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="18.0" layoutY="455.0" prefHeight="17.0" prefWidth="171.0" text="Introduce un año" />
+      <Label layoutX="210.0" layoutY="455.0" prefHeight="17.0" prefWidth="171.0" text="Introduce un mes (1-12)" />
+      <Label layoutX="20.0" layoutY="429.0" prefHeight="17.0" prefWidth="363.0" text="Introduce un año y un mes para ver cuántos dias son domingo:" />
+      <Label fx:id="labelSundays" layoutX="17.0" layoutY="561.0" prefHeight="17.0" prefWidth="363.0" text="Salida" />
+      <ColorPicker fx:id="pickerColor" onAction="#cambiarColor" layoutX="120.0" layoutY="698.0" />
+   </children>
+</AnchorPane>
